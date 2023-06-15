@@ -1,0 +1,73 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    gap: 25px;
+
+ &__components {
+     border: 1px solid #cce7d0;
+     padding: 10px;
+     min-width: 250px;
+     border-radius: 10px;
+     cursor: pointer;
+     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+     transition: 0.2s ease;
+
+      &:hover {
+         box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+      }
+
+     .subcomponent {
+            display: grid;
+            padding: 10px 0;
+        
+            p {
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+            
+            a {
+                justify-self: end;
+                padding-right: 5px;
+            
+            }
+        }
+    }
+ 
+    img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+
+}
+
+.addidas {
+    color: var(--addidas-text);
+    font-size: 12px;
+}
+.sub {
+    font-size: 14px;
+    color: var(--nav-text);
+    padding-top: 7px;
+}
+.stars i {
+padding-top: 7px;
+font-size: 12px;
+color: var(--star-color);
+
+}
+.money {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--nav-hover);
+}
+.cart1{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 600;
+    line-height: 40px;
+    color: var(--cart-color);
+    background-color: var(--cart-color);
+} 

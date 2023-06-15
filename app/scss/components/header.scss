@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bar);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    &__logo {
+        //temporary style for color red;
+        background-color: red;
+    }
+    &__navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+
+        li {
+           list-style: none; 
+           padding: 0 20px;
+           position: relative;
+    
+            a {
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--nav-text);
+                transition: 0.3s ease; 
+            
+                 &:hover {
+                   color: var(--nav-hover);
+                }
+            }
+        }
+
+    } 
+}
+
+nav li a:hover,
+nav li a.active {
+    color: var(--nav-hover);
+}
+
+nav li a.active::after,
+nav li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--nav-hover);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}

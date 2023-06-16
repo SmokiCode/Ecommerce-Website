@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 23%);
     gap: 25px;
+    margin-bottom: 50px;
 
  &__components {
      border: 1px solid #cce7d0;
@@ -14,21 +15,24 @@
 
       &:hover {
          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+         transform: scale(105%);
+         transition: 150ms ease-in-out;
       }
 
      .subcomponent {
             display: grid;
             padding: 10px 0;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto;
         
             p {
-                margin-top: 2px;
-                margin-bottom: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
             }
             
             a {
                 justify-self: end;
                 padding-right: 5px;
-            
             }
         }
     }
@@ -47,27 +51,87 @@
 }
 .sub {
     font-size: 14px;
+    grid-column: 1 / 3;
     color: var(--nav-text);
     padding-top: 7px;
+    font-weight: 600;
 }
 .stars i {
 padding-top: 7px;
 font-size: 12px;
 color: var(--star-color);
+grid-column: 1 / 2;
 
 }
 .money {
     padding-top: 7px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--nav-hover);
+    grid-column: 1 / 2;
 }
 .cart1{
+  padding-left: 10px;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 50px;
     font-weight: 600;
     line-height: 40px;
     color: var(--cart-color);
-    background-color: var(--cart-color);
+    background-color: var(--cart-bg);
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 } 
+
+.repair {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-right: -10px;
+    background: url(/img/banner/b2.jpg);
+    background-size: cover;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 35vh;
+    background-position: center;
+
+    h2 {
+        margin-bottom: 10px;
+        color: var(--white-text);
+        font-weight: 500;
+    }
+    p {
+        color: var(--white-text);
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 5px 0;
+        span {
+            color: var(--off-color);
+        }
+        
+    }
+
+    button {
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 20px;
+        color: var(--black-text);
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 4px;
+
+       &:hover {
+        background-color: var(--nav-hover);
+        color: var(--white-text);
+       } 
+    }
+
+}

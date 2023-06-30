@@ -1,16 +1,52 @@
+@use "../util/" as *;
 
 .catalogue {
-    display: grid;
-    grid-template-rows: 50vh 30vh;
-    gap: 20px;
+   @include breakpoint(medium) {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 50vh 400px;
+        margin-bottom: 25px;
+        padding: 0 25px;
+    }
+
+    @include breakpoint(large) {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 50vh 30vh;
+        margin-bottom: 25px;
+    }
+.top-row {
+    @include breakpoint(medium) {
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+       grid-template-rows: repeat(2, 1fr);
+       height: 100%;
+       grid-row: 1 / 2;
+       margin-bottom: 100px;
+    }
+    @include breakpoint(large) {
+        display: grid;
+        grid-template-rows: 50vh;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: 1 / 2; 
+    }
   }
-  
-  .top-row {
-    display: grid;
-    gap: 10px;
-    height: 50vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row: 1 / 2; 
+  .bottom-row {
+    @include breakpoint(medium) {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        gap: 5px;
+        grid-row: 2 / 3;
+    }
+    @include breakpoint(large) {
+        display: grid;
+        grid-template-rows: 30vh;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-row: 2 / 3; 
+    }
   }
   .girl {
     background: url(/img/banner/b17.jpg);
@@ -75,13 +111,6 @@
 
   }
 
-  .bottom-row {
-    display: grid;
-    gap: 10px;
-    height: 32vh;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row: 2 / 3; 
-    grid-template-columns: repeat(3, 1fr); 
 
     .item1 {
         background: url(/img/banner/b7.jpg);
@@ -141,8 +170,8 @@
         }
 
     }
-
 }
+
   
   
   

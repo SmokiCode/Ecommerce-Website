@@ -1,0 +1,116 @@
+@use "../util/" as *;
+
+#product-details {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap; to apply for mobile only
+    width: 100%;
+    margin-bottom: 25px;
+
+    @include breakpoint-down (small) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-section {
+        padding-left: 20px;
+        width: 40%;
+        margin-right: 50px;
+
+        &__big-image{
+            img {
+             width: 100%;
+           }
+        }
+        &__smaller-image {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            img {
+             width: 24.20%;
+             cursor: pointer;
+            }
+        }
+
+    }
+    .right-section {
+        margin-top: 5px;
+        padding-top: 20px;
+        padding-right: 50px;
+        width: 55%;
+
+        h2 {
+            font-size: 14px;
+        }
+
+        h3 {
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+      .money {
+        margin-top: 0;
+        font-size: 30px;
+        margin-bottom: 5px;
+        color: var(--black-text);
+      }
+
+      select {
+        background: none;
+        outline: none;
+        display: block;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        color: var(--addidas-text);
+      }
+
+    }
+    input {
+        width: 50px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+        outline: none;
+    }
+
+    button {
+        border: none;
+        border-radius: 4px;
+        background-color: var(--nav-hover);
+        color: var(--white-text);
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 5px;
+        padding: 10px 20px;
+        transition: .2s;
+    }
+}
+.text {
+    margin-top: 30px;
+
+    p {
+        line-height: 25px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    #product-details {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     .left-section {
+        width: 100%;
+        margin: 10px 10px;
+        padding: 20px;
+    }
+    .right-section {
+        width: 100%;
+        margin: 10px 10px;
+        padding: 20px;
+    }    
+  }
+}

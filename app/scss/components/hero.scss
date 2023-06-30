@@ -1,11 +1,14 @@
+@use "../util/" as *;
 main {
     top: 0;
     position: relative;
+    overflow-x: hidden;
 }
 
 .hero {
     background-image: url("/img/hero4.png");
     background-size: cover;
+    background-position: top 25% right 0; //this make the background to move
     height: 90vh;
     width: 100%;
     padding: 25px 80px;
@@ -13,6 +16,14 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @include breakpoint-down (medium) {
+        background-position: top 30% right 30%;
+        height: 70vh;
+        padding: 25px 80px;
+    }
+
+
 
     &__trade{
         font-size: 20px;

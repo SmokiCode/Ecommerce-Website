@@ -1,3 +1,5 @@
+
+
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -10,7 +12,16 @@ html {
 }
 
 body {
-    font-family: var( --font-spartan);
-    margin: 0;
-    padding: 0;
+  font-family: var( --font-spartan);
+  margin: 0;
+  padding: 0;
+}
+
+
+$mobile-breakpoint: 640px;
+
+@media (max-width: $mobile-breakpoint) {
+  body {
+    overflow-x: hidden;
+  }
 }

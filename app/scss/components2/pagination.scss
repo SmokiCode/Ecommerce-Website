@@ -1,0 +1,21 @@
+#pagination {
+    text-align: center;
+    margin-bottom: 50px;
+
+    a {
+        background-color: var(--nav-hover);
+        padding: 15px 20px;
+        border-radius: 4px;
+        color: var(--white-text);
+        font-weight: 600;
+
+      i {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+   
+}
+
+//fa fa-shopping-cart cart1
+//fal fa-long-arrow-alt-right

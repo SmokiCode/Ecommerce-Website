@@ -1,2 +1,2 @@
-"use strict";console.log("hello world");
+"use strict";var bar=document.getElementById("bar"),nav=document.getElementById("navbar"),shut=document.getElementById("close");bar.addEventListener("click",(function(){nav.classList.add("active")})),shut.addEventListener("click",(function(){nav.classList.remove("active")}));
 //# sourceMappingURL=script.js.map

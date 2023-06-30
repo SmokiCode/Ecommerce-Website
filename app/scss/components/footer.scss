@@ -1,0 +1,98 @@
+@use "../util/" as *;
+
+.footer {
+
+    .sign-up {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(/img/banner/b14.png);
+        background-repeat: no-repeat;
+        background-position: 20% 30%;
+        background-color: #041e42;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 25px;
+            color: var(--white-text);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        p {
+            color: var(--white-text);
+            font-weight: 600;
+            font-size: 14px;
+            a {
+                color: #ffbd27;
+            }
+        }
+        
+        input {
+            width: 310px;
+            height: 50px;
+            padding: 20px;
+            font-size: 12px;
+            text-align: left;
+            border: 1px solid transparent;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            color: var(--addidas-text);
+            margin-right: 20px;
+            outline: none;
+
+        }
+        button {
+            margin: 0;
+            height: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 20px;
+            color: var(--white-text);
+            cursor: pointer;
+            transition: 0.2s;
+            border-radius: 0 4px 4px  0;
+            background-color: var(--cart-color);
+            border: 1px solid transparent;
+            margin-left: -23.9px;
+
+        }
+    
+    }
+
+    .socials {
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 400px 240px 230px 400px;
+
+        @include breakpoint-down(medium) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        div {
+            @include breakpoint-down(medium) {
+            margin-right: 30px;
+        }
+     }
+
+        .app{
+            width: 300px;
+        }
+        .apple {
+            border: 1px solid var(--nav-hover);
+            width: 140px;
+            border-radius: 4px;
+        }
+
+    }
+
+
+}
+ 
